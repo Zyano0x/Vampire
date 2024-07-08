@@ -60,6 +60,9 @@
     <ClInclude Include="include\Feature.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="include\Spoofer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
@@ -116,5 +119,10 @@
     <ClCompile Include="src\Feature.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <MASM Include="include\Spoofer.asm">
+      <Filter>Source Files</Filter>
+    </MASM>
   </ItemGroup>
 </Project>

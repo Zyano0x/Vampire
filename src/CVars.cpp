@@ -23,7 +23,6 @@ void BotInitSettings()
 	Settings[AIM_KEY] = BotAddConfig("Aimbot Settings", "Aimbot_Key", 0, 0, 4); // 5: 0, 1, 2, 3, 4
 	Settings[AIM_MODE] = BotAddConfig("Aimbot Settings", "Aimbot_Mode", 1, 0, 1); // Normal, Silent.	
 	Settings[AIM_BONE] = BotAddConfig("Aimbot Settings", "Aimbot_Bone", 0, 0, 2); // Head, Body
-	Settings[AIM_SMOOTH] = BotAddConfig("Aimbot Settings", "Aimbot_Smooth", 5.0f, 0.0f, 30.0f);
 	Settings[FOV] = BotAddConfig("Aimbot Settings", "Aimbot_Fov", false);
 	Settings[RADIUS] = BotAddConfig("Aimbot Settings", "Aimbot_Radius", 180.0f, 0.0f, 360.0f);
 	Settings[VISIBLE_CHECK] = BotAddConfig("Aimbot Settings", "Aimbot_VisibleCheck", false);
@@ -56,6 +55,7 @@ void BotInitSettings()
 	Settings[ESP_BODYARMOR] = BotAddConfig("Esp Settings", "Esp_BodyArmor", false);
 	Settings[ESP_RELIC] = BotAddConfig("Esp Settings", "Esp_Relic", false);
 	Settings[ESP_AMMO] = BotAddConfig("Esp Settings", "Esp_Ammo", false);
+	Settings[ESP_CONSUMABLE] = BotAddConfig("Esp Settings", "Esp_Consumable", false);
 	Settings[ESP_COMBINED_AMMO] = BotAddConfig("Esp Settings", "Esp_CombinedAmmo", false);
 	Settings[ESP_MOD] = BotAddConfig("Esp Settings", "Esp_Mod", false);
 	Settings[ESP_COLLECTIBLE] = BotAddConfig("Esp Settings", "Esp_Collectible", false);

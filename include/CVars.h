@@ -24,7 +24,6 @@ typedef enum
 	AIM_KEY,
 	AIM_MODE,
 	AIM_BONE,
-	AIM_SMOOTH,
 	FOV,
 	RADIUS,
 	VISIBLE_CHECK,

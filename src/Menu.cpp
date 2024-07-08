@@ -130,8 +130,6 @@ namespace Z
 							ImGui::Combo("Bone Target", &Settings[AIM_BONE].Value.iValue, AimBone, IM_ARRAYSIZE(AimBone));
 							ImGui::Spacing();
 							ImGui::SliderFloat("FOV Radius", &Settings[RADIUS].Value.fValue, Settings[RADIUS].Value.fMin, Settings[RADIUS].Value.fMax);
-							ImGui::Spacing();
-							ImGui::SliderFloat("Smooth", &Settings[AIM_SMOOTH].Value.fValue, Settings[AIM_SMOOTH].Value.fMin, Settings[AIM_SMOOTH].Value.fMax);
 							ImGui::PopItemWidth();
 						}
 						if (!Settings[AIM_ENABLED].Value.bValue)

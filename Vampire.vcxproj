@@ -54,6 +54,7 @@
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
   </ImportGroup>
   <ImportGroup Label="Shared">
   </ImportGroup>
@@ -175,6 +176,7 @@
     <ClInclude Include="include\Menu.h" />
     <ClInclude Include="include\Obfuscate.h" />
     <ClInclude Include="include\SDK.h" />
+    <ClInclude Include="include\Spoofer.h" />
     <ClInclude Include="include\UECore.h" />
     <ClInclude Include="libs\MinHook\MinHook.h" />
     <ClInclude Include="pch.h" />
@@ -225,7 +227,13 @@
     <ClCompile Include="src\SDK.cpp" />
     <ClCompile Include="src\UECore.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <MASM Include="include\Spoofer.asm">
+      <FileType>Document</FileType>
+    </MASM>
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
   </ImportGroup>
 </Project>

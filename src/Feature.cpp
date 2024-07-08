@@ -22,8 +22,8 @@ namespace Z
 		{
 			if (Engine::GetKeyPress(VK_LBUTTON, true))
 			{
-				OutViewInfo->Location = g_Game->OriginalLocation;
-				OutViewInfo->Rotation = g_Game->OriginalRotation;
+				OutViewInfo->Location = OriginalLocation;
+				OutViewInfo->Rotation = OriginalRotation;
 			}
 		}
 	}
@@ -32,8 +32,8 @@ namespace Z
 	{
 		g_Game->GetPlayerViewPointStub(PlayerController, Location, Rotation);
 
-		g_Game->OriginalLocation = *Location;
-		g_Game->OriginalRotation = *Rotation;
+		OriginalLocation = *Location;
+		OriginalRotation = *Rotation;
 
 		if (Settings[AIM_MODE].Value.iValue == 1 && Settings[AIM_ENABLED].Value.bValue)
 		{

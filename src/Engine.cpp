@@ -34,6 +34,8 @@ namespace Z
 		GetWindowRect(p_GameWindow, &tempRECT);
 		m_GameWidth = tempRECT.right - tempRECT.left;
 		m_GameHeight = tempRECT.bottom - tempRECT.top;
+
+		spoof_trampoline = (void*)Signature(std::string(skCrypt("FF 23"))).GetPointer();
 	}
 
 	bool Engine::GetKeyPress(int VKey, bool Immediate)
@@ -399,9 +401,9 @@ namespace Z
 		ImGui::NewFrame();
 		ImGui::GetIO().MouseDrawCursor = g_Engine->m_IsShowMenu;
 
-		g_Game->Visual();
-		g_Game->Aimbot();
-		g_Game->Misc();
+		spoof_call(Game::Visual);
+		spoof_call(Game::Aimbot);
+		spoof_call(Game::Misc);
 
 		Menu::Draw();
 
