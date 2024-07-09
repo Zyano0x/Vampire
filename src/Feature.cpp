@@ -47,8 +47,6 @@ namespace Z
 		}
 	}
 
-	// UWorld - 48 8B 1D ? ? ? ? 48 85 DB 74 ? 41 B0 | Instruction 3 | Add 7
-
 	void Game::Initialize()
 	{
 		uint64_t GetViewPointAddr = Signature(std::string(skCrypt("4C 8B DC 49 89 5B ? 55 56 57 48 81 EC ? ? ? ? 48 8B 05 ? ? ? ? 48 33 C4 48 89 84 24 ? ? ? ? 41 0F 29 73"))).GetPointer();
@@ -568,8 +566,8 @@ namespace Z
 		}
 		else
 		{
-			// Linear interpolation across the entire range
-			return MaxRadius + (MinRadius - MaxRadius) * (Distance - MinDistance) / (MaxDistance - MinDistance);
+			float t = (Distance - MinDistance) / (MaxDistance - MinDistance);
+			return MaxRadius + t * (MinRadius - MaxRadius);
 		}
 	}
 

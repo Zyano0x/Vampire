@@ -405,7 +405,7 @@ namespace Z
 		spoof_call(Game::Aimbot);
 		spoof_call(Game::Misc);
 
-		Menu::Draw();
+		spoof_call(Menu::Draw);
 
 		ImGui::EndFrame();
 		ImGui::Render();
